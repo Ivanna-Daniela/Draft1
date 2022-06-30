@@ -1,13 +1,13 @@
 ---
 title: "Introduction"
-teaching: 0
-exercises: 0
+teaching: 10
+exercises: 15
 questions:
-- "Key question (FIXME)"
+- "What is Kubernetes?"
 objectives:
-- "First learning objective. (FIXME)"
+- "Learn the very basics of Kubernetes"
 keypoints:
-- "First key point. Brief Answer to questions. (FIXME)"
+- "First key point. Brief Answer to questions."
 ---
 FIXME
 
