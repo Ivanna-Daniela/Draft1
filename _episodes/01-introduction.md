@@ -33,17 +33,11 @@ Argo is a collection of open source tools that let us to extend the functions in
 We are going to explain 3 of the tools most important for working with argo.
 ###
 <p align="center">
-Texto alineado
-  <b>Links:</b><br>
-  <a href="#">Link 1</a> |
-  <a href="#">Link 2</a> |
-  <a href="#">Link 3</a>
-  <br><br>
   <img src="https://user-images.githubusercontent.com/70413460/176798180-3e3d6445-5b07-4087-94fd-174a998a6b03.png">
 </p>
 ###
-![image](https://user-images.githubusercontent.com/70413460/176798180-3e3d6445-5b07-4087-94fd-174a998a6b03.png)
-###
+
+
 ### 1. Argo workflow
 Is used to execute complex job orchestration, including serial and parallel execution where each stage is executed like a container.
 
