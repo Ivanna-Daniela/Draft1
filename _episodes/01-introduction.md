@@ -28,7 +28,7 @@ While master nodes are constantly sharing data, managing the control plane (rout
 In the Kubernetes world, pods are the smallest computing unit. A pod is made up of one or more containers. While pods are essential for understanding Kubernetes, when writing services we don't actually deal in pods but one further abstraction, deployments, which create pods for us.
 
 
-### Argo
+## Argo
 Argo is a collection of open source tools that let us to extend the functions in Kubernetes.
 We are going to explain 3 of the tools most important for working with argo.
 ###
@@ -44,7 +44,7 @@ It is an integrator of workflows that use events from different sources like: we
 It's a controller into kubernetes that supervises continually the applications in execute and compare their actually state.
 
 
-#### Autoscaling 
+## Autoscaling 
 - Kubernetes supports autoscaling to optimise your nodes' resources as wll as adjust CPU and memory to meet your application's real usage. 
 - If you need to save some money, you can scale down. Probably you want to pay for what you use, keep only with the resources when you need them
 
