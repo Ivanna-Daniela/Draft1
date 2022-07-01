@@ -51,8 +51,9 @@ where ```command ```, ```TYPE```, ```NAME```, and ```flags``` are:
 <br />For installation instructions, see [Installing kubectl](https://kubernetes.io/docs/tasks/tools/#kubectl); for a quick guide, see the [cheat sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/).
 ###
 
-# Argo
-###
+## Argo
+
+
 Argo is a collection of open source tools that let us to extend the functions in Kubernetes. We can find some benefits from use argo.
 - Cloud agnostic service
 - Argo can execute on absolutely in all clusters in kubernetes.
@@ -64,13 +65,13 @@ We are going to explain 3 of the tools most important for working with argo.
   <img src="https://user-images.githubusercontent.com/70413460/176803763-43e3943f-0e55-47b0-8446-662d692dbb7a.png">
 </p>
 
-## 1. Argo workflow
+### 1. Argo workflow
 - Is used to execute complex job orchestration, including serial and parallel execution where each stage is executed like a container.
 - It is the most popular workflow execution engine for kubernetes.
 - You can run thousands of workflows a day, each with thousands of concurrent tasks.
 - Designed from the ground up for containers without the overhead and limitations of legacy VM and server-based environments. 
 
-## 2. Argo Events
+### 2. Argo Events
 Argo events is an event-driven workflow automation framework for kubernetes. It allows you to trigger 10 different actions (such as the creation of Kubernetes objects, invoke workflows or serverless workloads) on over 20 different events (such as webhook, S3 drop, cron schedule, messaging queues - e.g. Kafka, GCP PubSub, SNS, SQS).
 Features
 Supports events from 20+ event sources and 10+ triggers.
@@ -78,7 +79,7 @@ Ability to customize business-level constraint logic for workflow automation.
 Manage everything from simple, linear, real-time to complex, multi-source events.
 CloudEvents compliant.
 
-## 3. Argo CD
+### 3. Argo CD
 It is a controller within Kubernetes that continuously monitors running applications and compares their current status. It allows you to define a set of CRDs (Custom Resource Definitions) unlike others, it only implements repository monitoring by pulling. This means that in a certain time it reads each previously configured repository and applies all changes made in any modification.
 ##How to use ArgoCD?
 When we want to implement GitOps, we will use some tools:
