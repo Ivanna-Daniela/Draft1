@@ -31,7 +31,7 @@ In the Kubernetes world, pods are the smallest computing unit. A pod is made up 
 # Argo
 Argo is a collection of open source tools that let us to extend the functions in Kubernetes.
 We are going to explain 3 of the tools most important for working with argo.
-###
+
 <p align="center">
   <img src="https://user-images.githubusercontent.com/70413460/176798180-3e3d6445-5b07-4087-94fd-174a998a6b03.png">
 </p>
