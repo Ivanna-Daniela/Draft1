@@ -88,7 +88,7 @@ When we want to implement GitOps, we will use some tools:
 
 ## Autoscaling
 Kubernetes supports autoscaling to optimise your nodes’ resources as wll as adjust CPU and memory to meet your application’s real usage. When you need to save some money, you can scale down. Probably you want to pay for what you use, keep only with the resources when you need them
-If you want to learn about pricing, ckeck the next link: https://cloud.google.com/compute/all-pricing
+If you want to learn about pricing, ckeck the next link: [Google-cloud](https://cloud.google.com/compute/all-pricing)
 
 
 
