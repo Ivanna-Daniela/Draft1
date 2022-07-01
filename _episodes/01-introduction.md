@@ -4,8 +4,10 @@ teaching: 10
 exercises: 15
 questions:
 - "What is Kubernetes?"
+- "What is Argo?"
 objectives:
 - "Learn the very basics of Kubernetes"
+- "Learn the very basics of Argo"
 keypoints:
 - "First key point. Brief Answer to questions."
 ---
