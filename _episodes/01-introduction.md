@@ -49,11 +49,9 @@ where ```command ```, ```TYPE```, ```NAME```, and ```flags``` are:
 <br /> ```flags:```Specifies optional flags. 
 <br />
 <br />For installation instructions, see [Installing kubectl](https://kubernetes.io/docs/tasks/tools/#kubectl); for a quick guide, see the [cheat sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/).
-###
-
-## Argo
 
 
+# Argo
 Argo is a collection of open source tools that let us to extend the functions in Kubernetes. We can find some benefits from use argo.
 - Cloud agnostic service
 - Argo can execute on absolutely in all clusters in kubernetes.
