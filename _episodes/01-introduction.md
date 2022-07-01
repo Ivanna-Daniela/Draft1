@@ -28,11 +28,12 @@ Kubernetes masters share state via etcd, a distributed key-value store (KVS) imp
 While master nodes are constantly sharing data, managing the control plane (routing inside the Kubernetes cluster), and scheduling services, workers primarily run pods.
 
 ## Nodes Components
-| Component | Description |
-| ----------- | ----------- |
-| Pods | In the Kubernetes world, pods are the smallest computing unit. A pod is made up of one or more containers. While pods are essential for understanding Kubernetes, when writing services we don't actually deal in pods but one further abstraction, deployments, which create pods for us|
-| Kubelet | The kubelet is the primary "node agent" that runs on each node.The kubelet takes a set of PodSpecs and ensures that the containers described in those PodSpecs are running and healthy. |
-| Kube-Proxy| It reflects the services defined in the cluster and manages the rules to load-balance requests to a service’s backend pods.|
+### Pods 
+In the Kubernetes world, pods are the smallest computing unit. A pod is made up of one or more containers. While pods are essential for understanding Kubernetes, when writing services we don't actually deal in pods but one further abstraction, deployments, which create pods for us|
+### Kubelet 
+The kubelet is the primary "node agent" that runs on each node.The kubelet takes a set of PodSpecs and ensures that the containers described in those PodSpecs are running and healthy. 
+### Kube-Proxy 
+It reflects the services defined in the cluster and manages the rules to load-balance requests to a service’s backend pods.
 
 ## Command line tool (kubectl)
 Kubernetes provides a kubectl for communicating with a Kubernetes cluster's control plane, using the Kubernetes API.
@@ -43,7 +44,8 @@ kubectl [command] [TYPE] [NAME] [flags]
 where ```command ```, ```TYPE```, ```NAME```, and ```flags``` are:
 
 ```command:``` Specifies the operation that you want to perform on one or more resources, for example create, get, describe, delete.
-```TYPE:``` Specifies the resource type.
-```NAME:``` Specifies the name of the resource. 
- ```flags:```Specifies optional flags. 
- For installation instructions, see [Installing kubectl](https://kubernetes.io/docs/tasks/tools/#kubectl); for a quick guide, see the [cheat sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/).
+<br />```TYPE:``` Specifies the resource type.
+<br />```NAME:``` Specifies the name of the resource. 
+<br /> ```flags:```Specifies optional flags. 
+<br />
+<br />For installation instructions, see [Installing kubectl](https://kubernetes.io/docs/tasks/tools/#kubectl); for a quick guide, see the [cheat sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/).
