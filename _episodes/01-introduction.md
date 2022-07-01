@@ -13,10 +13,13 @@ keypoints:
 Kubernetes is a container orchestration system open sourced by Google. Its main purpose is to schedule services to run on a cluster of computers while abstracting away the existence of the cluster from the services. Kubernetes is now maintained by the Cloud Native Computing Foundation, which is a part of the Linux Foundation. Kubernetes can flexibly handle replication, impose resource limits, and recover quickly from failures.
 
 ## Why you need Kubernetes?
-Kubernetes provides you with a framework to run distributed systems resiliently. It takes care of scaling and failover for your application, provides deployment patterns, and more.
+Kubernetes provides you with a framework to run distributed systems resiliently. Kubernetes provides you with service discovery and load balancing, storage orchestration, automated rollouts and rollbacks, automatic bin packing, self-healing, secret and configuration management. 
 
 ## What is Kubernetes Cluster?
 A Kubernetes cluster consists of "master" nodes and "worker" nodes. In short, master nodes share state to manage the cluster and schedule jobs to run on workers. It is considered best practice to run an odd number of masters.
+
+## Kubernetes Components
+When you deploy Kubernetes, you get a cluster. A Kubernetes cluster consists of a set of worker machines, called nodes. The worker nodes host the Pods that are the components of the application workload.
 
 ### Masters
 Kubernetes masters share state via etcd, a distributed key-value store (KVS) implementing the Raft protocol. Do note that the state stored in etcd is scheduling state, service locations, and other cluster metadata; it does not keep state for the services running on the cluster.
@@ -24,36 +27,23 @@ Kubernetes masters share state via etcd, a distributed key-value store (KVS) imp
 ### Workers
 While master nodes are constantly sharing data, managing the control plane (routing inside the Kubernetes cluster), and scheduling services, workers primarily run pods.
 
-### Pods
-In the Kubernetes world, pods are the smallest computing unit. A pod is made up of one or more containers. While pods are essential for understanding Kubernetes, when writing services we don't actually deal in pods but one further abstraction, deployments, which create pods for us.
+## Nodes Components
+| Component | Description |
+| ----------- | ----------- |
+| Pods | In the Kubernetes world, pods are the smallest computing unit. A pod is made up of one or more containers. While pods are essential for understanding Kubernetes, when writing services we don't actually deal in pods but one further abstraction, deployments, which create pods for us|
+| Kubelet | The kubelet is the primary "node agent" that runs on each node.The kubelet takes a set of PodSpecs and ensures that the containers described in those PodSpecs are running and healthy. |
+| Kube-Proxy| It reflects the services defined in the cluster and manages the rules to load-balance requests to a service’s backend pods.|
 
+## Command line tool (kubectl)
+Kubernetes provides a kubectl for communicating with a Kubernetes cluster's control plane, using the Kubernetes API.
+Use the following syntax to run kubectl commands from your terminal window:
+~~~
+kubectl [command] [TYPE] [NAME] [flags]
+~~~
+where ```command ```, ```TYPE```, ```NAME```, and ```flags``` are:
 
-# Argo
-Argo is a collection of open source tools that let us to extend the functions in Kubernetes.
-We are going to explain 3 of the tools most important for working with argo. We can find some benefits from use argo.
-- Cloud agnostic service
-- Argo can execute on absolutely in all clusters in kubernetes.
-- We can review the state of resources constantly. 
-- There is a large capacity of executing jobs at the same time and from different nodes.
-- It's possible correct debug errors. 
-
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/70413460/176798180-3e3d6445-5b07-4087-94fd-174a998a6b03.png">
-</p>
-
-
-### 1. Argo workflow
-Is used to execute complex job orchestration, including serial and parallel execution where each stage is executed like a container.
-
-### 2. Argo Events
-It is an integrator of workflows that use events from different sources like: webhook, S3, schedules, streams, etc.
-
-### 3. Argo CD
-It's a controller into kubernetes that supervises continually the applications in execute and compare their actually state.
-
-
-# Autoscaling 
-- Kubernetes supports autoscaling to optimise your nodes' resources as wll as adjust CPU and memory to meet your application's real usage. 
-- If you need to save some money, you can scale down. Probably you want to pay for what you use, keep only with the resources when you need them
-
-If you want to learn about pricing, ckeck the next link: https://cloud.google.com/compute/all-pricing
+```command:``` Specifies the operation that you want to perform on one or more resources, for example create, get, describe, delete.
+```TYPE:``` Specifies the resource type.
+```NAME:``` Specifies the name of the resource. 
+ ```flags:```Specifies optional flags. 
+ For installation instructions, see [Installing kubectl](https://kubernetes.io/docs/tasks/tools/#kubectl); for a quick guide, see the [cheat sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/).
